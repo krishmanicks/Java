@@ -23,6 +23,14 @@ public int maxpath(Node root)
   return max;
 }
 
+int maximum(int a , int b)
+{
+  if(a>b)
+    return a;
+  else
+    return b;
+}
+
   public int postorder(Node root)
     {
         if(root == null)
@@ -30,8 +38,8 @@ public int maxpath(Node root)
 
         int left = (postorder(root.left));
         int right = (postorder(root.right));
-        max = Math.max(max, left + right + root.data);
-        return Math.max(left,right) + root.data;
+        max = maximum(max ,left + right + root.data);
+        return maximum(left,right) + root.data;
     }
 
   public static void main(String[] args) {
