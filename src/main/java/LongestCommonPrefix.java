@@ -9,7 +9,7 @@ public class LongestCommonPrefix {
         List<String> prefixes = Arrays.asList("cluster", "clue", "clutch", "club", "clumsy");
 
         String strs[] = {"cluster", "clue", "club", "clutch", "clumsy"};
-        System.out.println(solve(strs, prefixes.size() - 1));
+        System.out.println(solve(strs, strs.length - 1));
     }
 
     private static String solve(String[] prefixes, int size) {
